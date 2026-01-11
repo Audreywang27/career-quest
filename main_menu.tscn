@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgitxnuyimqyj"]
+
+[ext_resource type="Script" uid="uid://cq6k4q2hr0lu2" path="res://main_menu.gd" id="1_06t4h"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.5
+offset_top = -50.5
+offset_right = 33.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Game 1" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+text = "Game 1"
+
+[node name="Game 2" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+text = "Game 2"
+
+[node name="Game 3" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+text = "Game 3"
+
+[connection signal="pressed" from="VBoxContainer/Game 1" to="." method="_on_game_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Game 2" to="." method="_on_game_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Game 3" to="." method="_on_game_3_pressed"]
