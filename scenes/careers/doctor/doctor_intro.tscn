@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://damyf4gptmjnt"]
+[gd_scene load_steps=3 format=3 uid="uid://damyf4gptmjnt"]
 
 [ext_resource type="Script" uid="uid://c58jy4c6a16ej" path="res://scenes/careers/doctor/doctor_intro.gd" id="1_hh1xc"]
+[ext_resource type="Script" uid="uid://wvitx8o1srj3" path="res://scenes/careers/doctor/doctor_vitals.gd" id="2_bylix"]
 
 [node name="DoctorIntro" type="Control"]
 layout_mode = 3
@@ -62,7 +63,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "Dr. Smith:Welcome to the ER! A patient just arrived with chest pain. What's your first action?"
+text = "Dr. Smith: Welcome to the ER! A patient just arrived with chest pain. What's your first action?"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="DialogueBox"]
@@ -85,6 +86,7 @@ alignment = 1
 custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 text = "Check vital signs"
+script = ExtResource("2_bylix")
 
 [node name="Choice2" type="Button" parent="DialogueBox/HBoxContainer"]
 custom_minimum_size = Vector2(250, 60)
