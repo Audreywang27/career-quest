@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://g8m4mls5gv6k"]
 
-[ext_resource type="Script" uid="uid://c58jy4c6a16ej" path="res://scenes/careers/doctor/doctor_intro.gd" id="1_gxweb"]
+[ext_resource type="Script" uid="uid://cn7hohfdgqq3b" path="res://scenes/careers/doctor/doctor_history.gd" id="1_gxweb"]
 
 [node name="DoctorIntro" type="Control"]
 layout_mode = 3
@@ -11,18 +11,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gxweb")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -10.0
-offset_top = -14.0
-offset_right = 1164.0
-offset_bottom = 684.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 3.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.605157, 0.876616, 0.958852, 1)
 
 [node name="SceneImage" type="TextureRect" parent="."]
 layout_mode = 1

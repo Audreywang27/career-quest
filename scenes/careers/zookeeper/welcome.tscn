@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dl88bqt4qeinb"]
+
+[node name="Welcome" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 547.0
+offset_right = 932.0
+offset_bottom = 587.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogueBox"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="DialogueBox/HBoxContainer"]
+layout_mode = 2

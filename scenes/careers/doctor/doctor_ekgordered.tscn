@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ci7tq83xggu06"]
 
-[ext_resource type="Script" uid="uid://c58jy4c6a16ej" path="res://scenes/careers/doctor/doctor_intro.gd" id="1_73lk4"]
+[ext_resource type="Script" uid="uid://c1y0tv7ruq4hr" path="res://scenes/careers/doctor/doctor_ekgordered.gd" id="1_73lk4"]
 
 [node name="DoctorIntro" type="Control"]
 layout_mode = 3
@@ -16,12 +16,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -10.0
-offset_top = -14.0
-offset_right = 1164.0
-offset_bottom = 684.0
+offset_left = -112.0
+offset_top = -82.0
+offset_right = 1062.0
+offset_bottom = 616.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(686, 364)
 color = Color(0.605157, 0.876616, 0.958852, 1)
 
 [node name="SceneImage" type="TextureRect" parent="."]
@@ -91,3 +92,6 @@ custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 text = "Give aspirin
 "
+
+[connection signal="pressed" from="DialogueBox/HBoxContainer/Choice1" to="." method="_on_choice_1_pressed"]
+[connection signal="pressed" from="DialogueBox/HBoxContainer/Choice2" to="." method="_on_choice_2_pressed"]
