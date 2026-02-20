@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://mrxpvq6664ln"]
+
+[ext_resource type="Script" uid="uid://cvc2fc38tiw6p" path="res://scenes/careers/zookeeper/enrichment_penguin.gd" id="1_8x1p6"]
+
+[node name="EnrichmentPenguin" type="Node2D"]
+script = ExtResource("1_8x1p6")
+
+[node name="home" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 65.0
+offset_bottom = 43.0
+text = "Back"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 291.0
+offset_top = 22.0
+offset_right = 882.0
+offset_bottom = 78.0
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[center]Move your cursor to play with the animal![/center]"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]

@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://b20toij1km61s"]
+
+[ext_resource type="Script" uid="uid://dxcicl55kxp4p" path="res://scenes/careers/zookeeper/enrichment.gd" id="1_o630x"]
+
+[node name="Enrichment" type="Node2D"]
+script = ExtResource("1_o630x")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 323.0
+offset_top = 212.0
+offset_right = 833.0
+offset_bottom = 269.0
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[center]Choose an animal to play with!"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+
+[node name="home" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 65.0
+offset_bottom = 43.0
+text = "Back"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 359.0
+offset_top = 315.0
+offset_right = 805.0
+offset_bottom = 459.0
+
+[node name="monkey" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Monkey"
+
+[node name="lion" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lion"
+
+[node name="penguin" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Penguin"
+
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="HBoxContainer/monkey" to="." method="_on_monkey_pressed"]
+[connection signal="pressed" from="HBoxContainer/lion" to="." method="_on_lion_pressed"]
+[connection signal="pressed" from="HBoxContainer/penguin" to="." method="_on_penguin_pressed"]

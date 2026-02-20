@@ -24,3 +24,7 @@ func _on_choice2_pressed():
 	print("Player chose: Ask about medical history first")
 	# For now, just go back to main menu
 	get_tree().change_scene_to_file("res://scenes/careers/doctor/doctor_history.tscn")
+
+
+func _on_home_pressed() -> void:
+	get_tree().change_scene_to_file("res://main_menu.tscn")

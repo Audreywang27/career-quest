@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://djo7t32oi1xhl"]
+
+[ext_resource type="Script" uid="uid://ck8f0ais4m64r" path="res://scenes/careers/zookeeper/feed.gd" id="1_q6qto"]
+
+[node name="Feed_tscn" type="Node2D"]
+script = ExtResource("1_q6qto")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 219.0
+offset_top = 77.0
+offset_right = 910.0
+offset_bottom = 255.0
+
+[node name="Lion" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Penguin" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Monkey" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 447.0
+offset_top = 308.0
+offset_right = 680.0
+offset_bottom = 601.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Meat"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Fish"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Fruit"
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+
+[node name="home" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 65.0
+offset_bottom = 43.0
+text = "Back
+"
+
+[connection signal="pressed" from="HBoxContainer/Lion" to="." method="_on_lion_pressed"]
+[connection signal="pressed" from="HBoxContainer/Penguin" to="." method="_on_penguin_pressed"]
+[connection signal="pressed" from="HBoxContainer/Monkey" to="." method="_on_monkey_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]

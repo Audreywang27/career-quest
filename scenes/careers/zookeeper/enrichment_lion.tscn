@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0gavr7qrqeri"]
+
+[ext_resource type="Script" uid="uid://cjkeoj023ayhe" path="res://scenes/careers/zookeeper/enrichment_lion.gd" id="1_oeisb"]
+
+[node name="EnrichmentLion" type="Node2D"]
+script = ExtResource("1_oeisb")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 291.0
+offset_top = 22.0
+offset_right = 882.0
+offset_bottom = 78.0
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[center]Move your cursor to play with the animal![/center]"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+
+[node name="home" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 65.0
+offset_bottom = 43.0
+text = "Back"
+
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]

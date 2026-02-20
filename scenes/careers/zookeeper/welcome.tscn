@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://dl88bqt4qeinb"]
+[gd_scene load_steps=2 format=3 uid="uid://dl88bqt4qeinb"]
+
+[ext_resource type="Script" uid="uid://x8l41vuvyw4w" path="res://scenes/careers/zookeeper/welcome.gd" id="1_d08cy"]
 
 [node name="Welcome" type="Node2D"]
+script = ExtResource("1_d08cy")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -9,20 +12,64 @@ offset_bottom = 40.0
 [node name="DialogueBox" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 40.0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="DialogueBox"]
-layout_mode = 0
-offset_left = 217.0
-offset_top = 547.0
-offset_right = 932.0
-offset_bottom = 587.0
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 2.2900002
+offset_left = 347.0
+offset_top = 155.0
+offset_right = 759.0
+offset_bottom = 223.4
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]You are a zookeeper at City Zoo. 
+Your morning shift starts now. 
+Complete your daily tasks before the zoo opens to the public! [/center]"
+tab_size = 6
 
 [node name="HBoxContainer" type="HBoxContainer" parent="DialogueBox"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 6.577
+anchor_bottom = 6.577
+offset_left = 112.0
+offset_top = 113.91998
+offset_right = 1002.0
+offset_bottom = 277.91998
 
 [node name="Button" type="Button" parent="DialogueBox/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+text = "Feed Animals"
+
+[node name="Button2" type="Button" parent="DialogueBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Health Check"
+
+[node name="Button3" type="Button" parent="DialogueBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Enrichment"
+
+[node name="Button4" type="Button" parent="DialogueBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Write Log"
+
+[node name="home" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 65.0
+offset_bottom = 43.0
+text = "Back"
+
+[connection signal="pressed" from="DialogueBox/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="DialogueBox/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="DialogueBox/HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="DialogueBox/HBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]
