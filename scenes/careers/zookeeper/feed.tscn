@@ -1,40 +1,51 @@
-[gd_scene load_steps=2 format=3 uid="uid://djo7t32oi1xhl"]
+[gd_scene load_steps=5 format=3 uid="uid://djo7t32oi1xhl"]
 
 [ext_resource type="Script" uid="uid://ck8f0ais4m64r" path="res://scenes/careers/zookeeper/feed.gd" id="1_q6qto"]
+[ext_resource type="Texture2D" uid="uid://db88aymq5hf18" path="res://scenes/careers/zookeeper/button_pics/Untitled32.png" id="2_l0bgw"]
+[ext_resource type="Texture2D" uid="uid://bxdncdh7cejdf" path="res://scenes/careers/zookeeper/button_pics/Untitled33.png" id="3_p5mxk"]
+[ext_resource type="Texture2D" uid="uid://ccywo0rv8olss" path="res://scenes/careers/zookeeper/button_pics/Untitled34.png" id="4_kon0f"]
 
 [node name="Feed_tscn" type="Node2D"]
 script = ExtResource("1_q6qto")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 309.0
+offset_top = 34.0
+offset_right = 816.0
+offset_bottom = 74.0
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[center]Match the animals with their proper food!"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 219.0
-offset_top = 77.0
-offset_right = 910.0
-offset_bottom = 255.0
+offset_left = 206.0
+offset_top = 100.0
+offset_right = 916.0
+offset_bottom = 306.0
 
-[node name="Lion" type="Button" parent="HBoxContainer"]
+[node name="Lion" type="TextureButton" parent="HBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
+texture_normal = ExtResource("2_l0bgw")
 
-[node name="Penguin" type="Button" parent="HBoxContainer"]
+[node name="Penguin" type="TextureButton" parent="HBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
+texture_normal = ExtResource("3_p5mxk")
 
-[node name="Monkey" type="Button" parent="HBoxContainer"]
+[node name="Monkey" type="TextureButton" parent="HBoxContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 3
+texture_normal = ExtResource("4_kon0f")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 447.0
-offset_top = 308.0
+offset_top = 325.0
 offset_right = 680.0
-offset_bottom = 601.0
+offset_bottom = 618.0
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2

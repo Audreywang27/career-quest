@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b20toij1km61s"]
+[gd_scene load_steps=5 format=3 uid="uid://b20toij1km61s"]
 
 [ext_resource type="Script" uid="uid://dxcicl55kxp4p" path="res://scenes/careers/zookeeper/enrichment.gd" id="1_o630x"]
+[ext_resource type="Texture2D" uid="uid://ccywo0rv8olss" path="res://scenes/careers/zookeeper/button_pics/Untitled34.png" id="2_hcc5l"]
+[ext_resource type="Texture2D" uid="uid://db88aymq5hf18" path="res://scenes/careers/zookeeper/button_pics/Untitled32.png" id="3_8gby4"]
+[ext_resource type="Texture2D" uid="uid://bxdncdh7cejdf" path="res://scenes/careers/zookeeper/button_pics/Untitled33.png" id="4_i04kr"]
 
 [node name="Enrichment" type="Node2D"]
 script = ExtResource("1_o630x")
@@ -28,25 +31,25 @@ offset_bottom = 43.0
 text = "Back"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 359.0
-offset_top = 315.0
-offset_right = 805.0
-offset_bottom = 459.0
+offset_left = 217.0
+offset_top = 307.0
+offset_right = 927.0
+offset_bottom = 513.0
 
-[node name="monkey" type="Button" parent="HBoxContainer"]
+[node name="monkey" type="TextureButton" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Monkey"
+texture_normal = ExtResource("2_hcc5l")
 
-[node name="lion" type="Button" parent="HBoxContainer"]
+[node name="lion" type="TextureButton" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Lion"
+texture_normal = ExtResource("3_8gby4")
 
-[node name="penguin" type="Button" parent="HBoxContainer"]
+[node name="penguin" type="TextureButton" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Penguin"
+texture_normal = ExtResource("4_i04kr")
 
 [connection signal="pressed" from="home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="HBoxContainer/monkey" to="." method="_on_monkey_pressed"]

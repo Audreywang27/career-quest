@@ -41,14 +41,38 @@ func check_answer(animal):
 	if selected_food == "":
 		return
 	if correct_answers[animal] == selected_food:
-		$AcceptDialog.dialog_text = "Correct!"
-		$AcceptDialog.popup_centered()
+		show_correct_expression(animal)
+		disable_food_button(selected_food)
 	else:
-		$AcceptDialog.dialog_text = "Wrong! Try again!"
-		$AcceptDialog.popup_centered()
+		show_incorrect_expression(animal)
 	selected_food = ""
 
-func _on_accept_dialog_confirmed():
+func disable_food_button(food):
+	if food == "Meat":
+		$VBoxContainer/Button.disabled = true
+		$VBoxContainer/Button.modulate = Color(0.5, 0.5, 0.5)
+	elif food == "Fish":
+		$VBoxContainer/Button2.disabled = true
+		$VBoxContainer/Button2.modulate = Color(0.5, 0.5, 0.5)
+	elif food == "Fruit":
+		$VBoxContainer/Button3.disabled = true
+		$VBoxContainer/Button3.modulate = Color(0.5, 0.5, 0.5)
+func show_correct_expression(animal):
+	var button = $HBoxContainer.get_node(animal)
+	var original_texture = button.texture_normal
+	button.texture_normal = load("res://scenes/careers/zookeeper/button_pics/Untitled34.png")
+	await get_tree().create_timer(2.0).timeout
+	button.texture_normal = original_texture
+		
+
+func show_incorrect_expression(animal):
+	var button = $HBoxContainer.get_node(animal)
+	var original_texture = button.texture_normal
+	button.texture_normal = load("res://scenes/careers/zookeeper/button_pics/Untitled33.png")
+	await get_tree().create_timer(2.0).timeout
+	button.texture_normal = original_texture
+		
+func _on_accept_dialog_confirmed(): #this isn't working, so need to figure ts out
 	get_tree().change_scene_to_file("res://scenes/careers/zookeeper/welcome.tscn")
 
 func _on_home_pressed() -> void:

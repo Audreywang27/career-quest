@@ -37,6 +37,7 @@ func check_complete():
 	if spots_remaining == 0:
 		$AcceptDialog.dialog_text = "Animal is healthy! Great work!"
 		$AcceptDialog.popup_centered()	
+		$TextureRect.texture = load("res://scenes/careers/zookeeper/button_pics/Untitled32.png")
 
 
 func _on_home_pressed() -> void:
