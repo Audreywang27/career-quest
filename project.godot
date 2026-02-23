@@ -21,7 +21,7 @@ ZookeeperData="res://scenes/careers/zookeeper/zookeeper_data.gd"
 [file_customization]
 
 folder_colors={
-"res://scenes/careers/doctor/dodge_game/": "green"
+"res://scenes/careers/dodge_game/": "green"
 }
 
 [rendering]
