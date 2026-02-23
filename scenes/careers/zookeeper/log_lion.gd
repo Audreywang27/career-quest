@@ -26,6 +26,15 @@ func load_question():
 func _on_button_pressed():
 	current_question += 1
 	load_question()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_accept_dialog_confirmed() -> void:
+	zookeeper_data.log_done["lion"] = true
+	if zookeeper_data.all_logged():
+		get_tree().change_scene_to_file("res://scenes/careers/zookeeper/welcome.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/careers/zookeeper/log.tscn")

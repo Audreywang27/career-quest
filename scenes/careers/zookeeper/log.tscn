@@ -1,43 +1,52 @@
-[gd_scene load_steps=2 format=3 uid="uid://cixfaap4q1oeb"]
+[gd_scene load_steps=6 format=3 uid="uid://cixfaap4q1oeb"]
 
 [ext_resource type="Script" uid="uid://dijsiq54wy4cv" path="res://scenes/careers/zookeeper/log.gd" id="1_7d7fm"]
+[ext_resource type="Texture2D" uid="uid://ccywo0rv8olss" path="res://scenes/careers/zookeeper/button_pics/Untitled34.png" id="2_l23xp"]
+[ext_resource type="Texture2D" uid="uid://bvyk22ko6jhmh" path="res://scenes/careers/zookeeper/theme_backgrounds/HZI-Zoom-BG-Arrival-Building (1).jpg" id="2_mmhal"]
+[ext_resource type="Texture2D" uid="uid://db88aymq5hf18" path="res://scenes/careers/zookeeper/button_pics/Untitled32.png" id="3_mmhal"]
+[ext_resource type="Texture2D" uid="uid://bxdncdh7cejdf" path="res://scenes/careers/zookeeper/button_pics/Untitled33.png" id="4_uj561"]
 
 [node name="Log" type="Node2D"]
 script = ExtResource("1_7d7fm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_mmhal")
 
 [node name="QuestionLabel" type="RichTextLabel" parent="."]
 offset_left = 323.0
 offset_top = 212.0
 offset_right = 833.0
 offset_bottom = 269.0
-theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "[center]Which animal do you want to log?"
 
 [node name="VBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 359.0
+offset_left = 216.0
 offset_top = 315.0
-offset_right = 805.0
-offset_bottom = 459.0
+offset_right = 950.0
+offset_bottom = 529.0
 alignment = 1
 
 [node name="monkey" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Monkey"
+icon = ExtResource("2_l23xp")
 
 [node name="lion" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Lion"
+icon = ExtResource("3_mmhal")
 
 [node name="penguin" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Penguin"
+icon = ExtResource("4_uj561")
 
 [node name="home" type="Button" parent="."]
 offset_left = 10.0

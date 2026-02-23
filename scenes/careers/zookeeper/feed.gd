@@ -36,13 +36,18 @@ func _on_penguin_pressed() -> void:
 func _on_monkey_pressed() -> void:
 	check_answer("Monkey")
 
-
+var fed_animals = []
 func check_answer(animal):
 	if selected_food == "":
 		return
 	if correct_answers[animal] == selected_food:
 		show_correct_expression(animal)
 		disable_food_button(selected_food)
+		if animal not in fed_animals:
+			fed_animals.append(animal)
+		if fed_animals.size() == 3:
+			$AcceptDialog.dialog_text = "Great job! All animals have been fed!"
+			$AcceptDialog.popup_centered()
 	else:
 		show_incorrect_expression(animal)
 	selected_food = ""
@@ -73,6 +78,7 @@ func show_incorrect_expression(animal):
 	button.texture_normal = original_texture
 		
 func _on_accept_dialog_confirmed(): #this isn't working, so need to figure ts out
+	zookeeper_data.activities_done["feed"] = true
 	get_tree().change_scene_to_file("res://scenes/careers/zookeeper/welcome.tscn")
 
 func _on_home_pressed() -> void:

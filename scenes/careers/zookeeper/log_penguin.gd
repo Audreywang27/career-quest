@@ -28,7 +28,11 @@ func _on_button_pressed():
 	load_question()
 	
 func _on_accept_dialog_confirmed():
-	get_tree().change_scene_to_file("res://scenes/careers/zookeeper/log.tscn")
+	zookeeper_data.log_done["penguin"] = true
+	if zookeeper_data.all_logged():
+		get_tree().change_scene_to_file("res://scenes/careers/zookeeper/welcome.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/careers/zookeeper/log.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

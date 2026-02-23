@@ -9,7 +9,7 @@ func _ready():
 	$DialogueBox.visible = false
 	background.texture = load("res://scenes/careers/doctor/docpics/Untitled29 (2).png")
 	choice1.pressed.connect(_on_choice1_pressed)
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.2).timeout
 	background.texture = load("res://scenes/careers/doctor/docpics/Untitled25 (2).png")
 	$DialogueBox.visible = true
 

@@ -1,9 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://mrxpvq6664ln"]
+[gd_scene load_steps=4 format=3 uid="uid://mrxpvq6664ln"]
 
 [ext_resource type="Script" uid="uid://cvc2fc38tiw6p" path="res://scenes/careers/zookeeper/enrichment_penguin.gd" id="1_8x1p6"]
+[ext_resource type="Texture2D" uid="uid://boka4xwf06yrd" path="res://scenes/careers/zookeeper/enrichment_animal_backgrounds/Untitled46.png" id="2_akmw4"]
+[ext_resource type="Texture2D" uid="uid://5j0hn4qo0p1g" path="res://scenes/careers/zookeeper/enrichment_toys/images-removebg-preview.png" id="2_fbb86"]
 
 [node name="EnrichmentPenguin" type="Node2D"]
 script = ExtResource("1_8x1p6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_akmw4")
 
 [node name="home" type="Button" parent="."]
 offset_left = 10.0
@@ -19,6 +26,7 @@ offset_left = 291.0
 offset_top = 22.0
 offset_right = 882.0
 offset_bottom = 78.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 22
 bbcode_enabled = true
 text = "[center]Move your cursor to play with the animal![/center]"
@@ -27,4 +35,10 @@ text = "[center]Move your cursor to play with the animal![/center]"
 
 [node name="AcceptDialog" type="AcceptDialog" parent="."]
 
+[node name="Cursor" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_fbb86")
+
 [connection signal="pressed" from="home" to="." method="_on_home_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="confirmed" from="AcceptDialog" to="." method="_on_accept_dialog_confirmed"]

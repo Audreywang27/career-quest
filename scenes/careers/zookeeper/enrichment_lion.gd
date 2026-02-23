@@ -25,30 +25,38 @@ func _process(delta: float) -> void:
 		$Cursor.position = mouse
 		
 		if mouse.x < $Sprite2D.position.x:
-			$Sprite2D.flip_h = true
+			$Sprite2D.flip_h = false
 		else:
-			$Sprite2D.flip_h = false 	
+			$Sprite2D.flip_h = true 	
 		
 
 func _input(event):
 	if event is InputEventMouseMotion:
-		$Sprite2D.texture = load("res://scenes/careers/zookeeper/button_pics/Untitled32.png")
+		$Sprite2D.texture = load("res://scenes/careers/zookeeper/enrichment_animal_pics/Untitled32__1_-removebg-preview.png")
 		idle_timer.start()
 
 func _on_mouse_idle():
-	$Sprite2D.texture = load("res://scenes/careers/zookeeper/button_pics/Untitled33.png")
-	$Timer.stop()
-	$Timer.start()
+	if playing: 
+		$Sprite2D.texture = load("res://scenes/careers/zookeeper/enrichment_animal_pics/Untitled32__2_-removebg-preview.png")
+		$Timer.stop()
+		$Timer.start()
+	
 func _on_timer_timeout():
 	playing = false
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	#$AcceptDialog.add_cancel_button().hide()
+	$Sprite2D.texture = load("res://scenes/careers/zookeeper/enrichment_animal_pics/Untitled32__3_-removebg-preview.png")
+
 	$AcceptDialog.dialog_text = "The animal is tired and happy! Great work!"
 	$AcceptDialog.popup_centered()
 	
 func _on_accept_dialog_confirmed() -> void:
-	get_tree().change_scene_to_file("res://scenes/careers/zookeeper/welcome.tscn")
-
-
+	zookeeper_data.played_with["lion"] = true
+	if zookeeper_data.all_played():
+		get_tree().change_scene_to_file("res://scenes/careers/zookeeper/welcome.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/careers/zookeeper/enrichment.tscn")
+	
 func _on_home_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/careers/zookeeper/welcome.tscn")
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	get_tree().change_scene_to_file("res://scenes/careers/zookeeper/enrichment.tscn")

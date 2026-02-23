@@ -1,9 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bf4fue1u4q5a8"]
+[gd_scene load_steps=4 format=3 uid="uid://bf4fue1u4q5a8"]
 
 [ext_resource type="Script" uid="uid://bofsxxunvy3hc" path="res://scenes/careers/zookeeper/enrichment_monkey.gd" id="1_umxrb"]
+[ext_resource type="Texture2D" uid="uid://cqmvufrh8oelu" path="res://scenes/careers/zookeeper/enrichment_animal_backgrounds/Untitled47.png" id="2_5lx5w"]
+[ext_resource type="Texture2D" uid="uid://c3edtw3s6yhvl" path="res://scenes/careers/zookeeper/enrichment_toys/51nAy3wZt0L-removebg-preview.png" id="2_if17o"]
 
 [node name="EnrichmentMonkey" type="Node2D"]
 script = ExtResource("1_umxrb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_5lx5w")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 291.0
@@ -27,4 +34,10 @@ offset_right = 65.0
 offset_bottom = 43.0
 text = "Back"
 
+[node name="Cursor" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_if17o")
+
+[connection signal="confirmed" from="AcceptDialog" to="." method="_on_accept_dialog_confirmed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="home" to="." method="_on_home_pressed"]
