@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://5gwwafjc4hcv"]
+
+[ext_resource type="Script" uid="uid://dq7q4njnmocwb" path="res://scenes/careers/doctor/dodge_game/player.gd" id="1_81may"]
+[ext_resource type="Texture2D" uid="uid://b6w6i0bvchmle" path="res://scenes/careers/doctor/dodge_game/gamesprites/Untitled30__2___5_-removebg-preview.png" id="2_pxfas"]
+
+[node name="Player_tscn" type="Area2D"]
+z_index = 199
+script = ExtResource("1_81may")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_pxfas")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-48, -68, 43, -68, 45, -13, 69, -20, 86, -6, 80, 21, 41, 25, 39, 51, 37, 64, 33, 65, -41, 65, -44, 31, -60, 25, -72, 22, -81, 14, -83, 2, -85, -5, -76, -9, -68, -15, -50, -12, -47, -18)

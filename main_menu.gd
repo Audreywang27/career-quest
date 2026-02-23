@@ -22,4 +22,5 @@ func _on_game_2_pressed() -> void:
 
 
 func _on_game_3_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/careers/architect/architect_Intro.tscn")
 	pass # Replace with function body.

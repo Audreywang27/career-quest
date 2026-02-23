@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bufi67crxpbpd"]
+
+[ext_resource type="Script" uid="uid://c1lreajrkbw7y" path="res://scenes/careers/doctor/dodge_game/obstacle.gd" id="1_ghn8y"]
+[ext_resource type="Texture2D" uid="uid://b6fd30nbakhnw" path="res://scenes/careers/doctor/dodge_game/gamesprites/Untitled30 (2) (9).png" id="2_ghn8y"]
+
+[node name="Obstacle" type="Area2D"]
+script = ExtResource("1_ghn8y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_ghn8y")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-70, -36, -47, -47, -26, -36, -22, -26, -5, -37, 21, -34, 51, -38, 61, -29, 71, -10, 69, 1, 69, 26, 62, 46, 40, 51, 30, 37, 22, 40, 16, 47, -19, 46, -21, 36, -31, 50, -43, 49, -59, 47, -70, 42, -72, 19, -70, 1, -67, -12)

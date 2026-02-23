@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://5ryi7oqnv51s"]
+
+[ext_resource type="Script" uid="uid://vfy30ms0tdty" path="res://scenes/careers/Architect/architect_intro.gd" id="1_sifay"]
+[ext_resource type="FontFile" uid="uid://c7w0rb0fhw5j0" path="res://Assets/Fonts/ShareTechMono-Regular.ttf" id="1_yk1yu"]
+[ext_resource type="Theme" uid="uid://cm10yo8xuc2b5" path="res://Assets/Themes/architect_Intro.tres" id="3_i73al"]
+[ext_resource type="Texture2D" uid="uid://bt2i8tapfyv8a" path="res://Assets/Photos/ArchitectDrawing_istockphoto.jpg" id="4_m0unq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sifay"]
+font = ExtResource("1_yk1yu")
+font_size = 80
+
+[node name="ArchitectIntro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sifay")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+clip_contents = true
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Header" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.05
+anchor_right = 0.5
+anchor_bottom = 0.05
+offset_left = -6095.0
+offset_right = 6095.0
+offset_bottom = 150.0
+grow_horizontal = 2
+
+[node name="Title" type="Label" parent="ColorRect/Header"]
+layout_mode = 2
+text = "The Architect"
+label_settings = SubResource("LabelSettings_sifay")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -450.0
+offset_right = 600.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_m0unq")
+
+[node name="Buttons" type="HBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.9
+anchor_right = 0.5
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_i73al")
+theme_override_constants/separation = 300
+
+[node name="Tetris" type="Button" parent="ColorRect/Buttons"]
+layout_mode = 2
+text = "Blueprint Stack"
+
+[node name="Puzzle" type="Button" parent="ColorRect/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.05
+text = "Room by Room"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Timing" type="Button" parent="ColorRect/Buttons"]
+layout_mode = 2
+text = "Precision Cut"
