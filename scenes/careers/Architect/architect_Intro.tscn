@@ -89,3 +89,5 @@ expand_icon = true
 [node name="Timing" type="Button" parent="ColorRect/Buttons"]
 layout_mode = 2
 text = "Precision Cut"
+
+[connection signal="pressed" from="ColorRect/Buttons/Tetris" to="." method="_on_tetris_pressed"]

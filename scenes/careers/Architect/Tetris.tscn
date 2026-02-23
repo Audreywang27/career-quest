@@ -1,0 +1,109 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://b50m7ljiqx0on" path="res://scenes/careers/Architect/tetris.gd" id="1_tetris"]
+
+; ─────────────────────────────────────────────────────────────────────────────
+;  SCENE STRUCTURE
+;
+;  Tetris  (Node2D + Tetris.gd)
+;  └─ UI  (CanvasLayer, layer=1)
+;     ├─ OverlayLabel      TetrisOverlay
+;     ├─ HoldLabel         TetrisStatLabel   ← "HOLD" heading inside hold box
+;     ├─ NextLabel         TetrisStatLabel   ← "NEXT" heading inside next box
+;     ├─ ScoreLabel        TetrisStatLabel
+;     ├─ ScoreValue        TetrisStatValue
+;     ├─ LevelLabel        TetrisStatLabel
+;     ├─ LevelValue        TetrisStatValue
+;     ├─ LinesLabel        TetrisStatLabel
+;     ├─ LinesValue        TetrisStatValue
+;     └─ InfoLabel         TetrisInfoLabel
+;
+;  HOLD KEY
+;  Default mapping uses "tetris_hold".  Add it in:
+;    Project → Project Settings → Input Map → Add Action "tetris_hold"
+;  Recommended key: C  or  Left Shift
+;
+;  THEME  →  assign res://TetrisTheme.tres in Project Settings → GUI → Theme
+; ─────────────────────────────────────────────────────────────────────────────
+
+[node name="Tetris" type="Node2D"]
+script = ExtResource("1_tetris")
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 1
+
+; ── Overlay ───────────────────────────────────────────────────────────────────
+[node name="OverlayLabel" type="Label" parent="UI"]
+visible              = false
+theme_type_variation = &"TetrisOverlay"
+text                 = ""
+horizontal_alignment = 1
+vertical_alignment   = 1
+autowrap_mode        = 3
+
+; ── HOLD label (left panel, inside hold box) ──────────────────────────────────
+[node name="HoldLabel" type="Label" parent="UI"]
+theme_type_variation = &"TetrisStatLabel"
+text                 = "HOLD"
+horizontal_alignment = 1
+
+; ── NEXT label (right panel, inside next box) ─────────────────────────────────
+[node name="NextLabel" type="Label" parent="UI"]
+theme_type_variation = &"TetrisStatLabel"
+text                 = "NEXT"
+horizontal_alignment = 1
+
+; ── Left panel: SCORE ─────────────────────────────────────────────────────────
+[node name="ScoreLabel" type="Label" parent="UI"]
+theme_type_variation = &"TetrisStatLabel"
+text                 = "SCORE"
+horizontal_alignment = 1
+
+[node name="ScoreValue" type="Label" parent="UI"]
+theme_type_variation = &"TetrisStatValue"
+text                 = "0"
+horizontal_alignment = 1
+
+; ── Left panel: LEVEL ─────────────────────────────────────────────────────────
+[node name="LevelLabel" type="Label" parent="UI"]
+theme_type_variation = &"TetrisStatLabel"
+text                 = "LEVEL"
+horizontal_alignment = 1
+
+[node name="LevelValue" type="Label" parent="UI"]
+theme_type_variation = &"TetrisStatValue"
+text                 = "1"
+horizontal_alignment = 1
+
+; ── Left panel: LINES ─────────────────────────────────────────────────────────
+[node name="LinesLabel" type="Label" parent="UI"]
+theme_type_variation = &"TetrisStatLabel"
+text                 = "LINES"
+horizontal_alignment = 1
+
+[node name="LinesValue" type="Label" parent="UI"]
+theme_type_variation = &"TetrisStatValue"
+text                 = "0"
+horizontal_alignment = 1
+
+; ── Bottom-right: Controls + Scoring guide ────────────────────────────────────
+[node name="InfoLabel" type="Label" parent="UI"]
+theme_type_variation = &"TetrisInfoLabel"
+text                 = "CONTROLS
+←  /  →     Move
+↑             Rotate
+↓             Soft drop (hold)
+Space       Hard drop
+C / Shift   Hold piece
+Enter         Pause / Restart
+
+SCORING
+1 line    ×  100  × level
+2 lines  ×  300  × level
+3 lines  ×  500  × level
+4 lines  ×  800  × level
+
+Level up every 10 lines."
+horizontal_alignment = 0
+vertical_alignment   = 0
+autowrap_mode        = 3
