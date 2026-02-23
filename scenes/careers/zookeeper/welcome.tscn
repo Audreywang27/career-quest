@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=3 uid="uid://dl88bqt4qeinb"]
+
+[ext_resource type="Script" uid="uid://x8l41vuvyw4w" path="res://scenes/careers/zookeeper/welcome.gd" id="1_d08cy"]
+[ext_resource type="Texture2D" uid="uid://bnpyjav7onmde" path="res://scenes/careers/zookeeper/theme_backgrounds/Drawing-60.sketchpad (1) (1).png" id="2_27e5l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27e5l"]
+bg_color = Color(0.14901961, 0.14901961, 0.14901961, 0.74509805)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yn4hv"]
+bg_color = Color(0.14901961, 0.14901961, 0.14901961, 0.74509805)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dlggn"]
+bg_color = Color(0.14901961, 0.14901961, 0.14901961, 0.74509805)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hcrn1"]
+bg_color = Color(0.15, 0.15, 0.15, 0.74509805)
+
+[node name="Welcome" type="Node2D"]
+script = ExtResource("1_d08cy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_27e5l")
+
+[node name="DialogueBox" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 40.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 347.0
+offset_top = 148.0
+offset_right = 759.0
+offset_bottom = 308.0
+color = Color(1, 1, 1, 0.6784314)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogueBox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 2.2900002
+offset_left = 347.0
+offset_top = 155.0
+offset_right = 759.0
+offset_bottom = 223.4
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]You are a zookeeper at The Zoo. 
+Your morning shift starts now. 
+Complete your daily tasks before the zoo opens to the public! [/center]"
+tab_size = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DialogueBox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 6.577
+anchor_bottom = 6.577
+offset_left = 112.0
+offset_top = 113.91998
+offset_right = 1002.0
+offset_bottom = 277.91998
+
+[node name="Button" type="Button" parent="DialogueBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/disabled = SubResource("StyleBoxFlat_27e5l")
+text = "Feed Animals"
+
+[node name="Button2" type="Button" parent="DialogueBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+theme_override_styles/disabled = SubResource("StyleBoxFlat_yn4hv")
+text = "Health Check"
+
+[node name="Button3" type="Button" parent="DialogueBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dlggn")
+text = "Enrichment"
+
+[node name="Button4" type="Button" parent="DialogueBox/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+theme_override_styles/disabled = SubResource("StyleBoxFlat_hcrn1")
+text = "Write Log"
+
+[node name="home" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 65.0
+offset_bottom = 43.0
+text = "Back"
+
+[connection signal="pressed" from="DialogueBox/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="DialogueBox/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="DialogueBox/HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="DialogueBox/HBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]

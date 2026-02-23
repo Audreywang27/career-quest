@@ -13,7 +13,16 @@ config_version=5
 config/name="career quest"
 run/main_scene="uid://dgitxnuyimqyj"
 config/features=PackedStringArray("4.5", "Mobile")
-config/icon="res://icon.svg"
+
+[autoload]
+
+ZookeeperData="res://scenes/careers/zookeeper/zookeeper_data.gd"
+
+[file_customization]
+
+folder_colors={
+"res://scenes/careers/dodge_game/": "green"
+}
 
 [rendering]
 

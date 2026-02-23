@@ -11,27 +11,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hh1xc")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -10.0
-offset_top = -14.0
-offset_right = 1164.0
-offset_bottom = 684.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.605157, 0.876616, 0.958852, 1)
 
 [node name="SceneImage" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 1159.0
-offset_bottom = 250.0
+offset_left = -541.0
+offset_top = -69.0
+offset_right = 638.0
+offset_bottom = 181.0
 grow_horizontal = 2
 
 [node name="DialogueBox" type="Panel" parent="."]
@@ -62,7 +62,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "Dr. Smith:Welcome to the ER! A patient just arrived with chest pain. What's your first action?"
+text = "Welcome to the ER! A patient just arrived with chest pain. What's your first action?"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="DialogueBox"]
@@ -91,3 +91,15 @@ custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 text = "Ask history
 "
+
+[node name="home" type="Button" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 65.0
+offset_bottom = 43.0
+text = "Back"
+
+[connection signal="pressed" from="DialogueBox/HBoxContainer/Choice1" to="." method="_on_choice_1_pressed"]
+[connection signal="pressed" from="DialogueBox/HBoxContainer/Choice2" to="." method="_on_choice_2_pressed"]
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]
