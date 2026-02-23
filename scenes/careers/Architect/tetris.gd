@@ -199,12 +199,12 @@ func _draw():
 	if SW == 0:
 		return
 
-	draw_rect(Rect2(0, 0, SW, SH), Color.BLACK, true)
+	draw_rect(Rect2(0, 0, SW, SH), Color.DARK_BLUE , true)
 
 	# Board
 	_outlined_rect(
 		Rect2(BX - BORDER, BY - BORDER, BW + BORDER*2, BH + BORDER*2),
-		Color.BLACK, Color.WHITE, BORDER)
+		Color.DARK_BLUE , Color.WHITE, BORDER)
 
 	for r in range(ROWS):
 		for c in range(COLS):
@@ -212,7 +212,7 @@ func _draw():
 			if board[r][c]:
 				_tetro_cell(rect)
 			else:
-				draw_rect(rect, Color.BLACK, true)
+				draw_rect(rect, Color.DARK_BLUE , true)
 
 	# Ghost
 	for pos in _get_ghost():
@@ -241,7 +241,7 @@ func _draw():
 
 # ── Draw helpers ──────────────────────────────────────────────────────────────
 func _tetro_cell(rect: Rect2):
-	draw_rect(rect, Color.BLACK, true)
+	draw_rect(rect, Color.DARK_BLUE , true)
 	var t = max(2.0, CELL * 0.07)
 	draw_rect(Rect2(rect.position.x, rect.position.y, rect.size.x, t), Color.WHITE, true)
 	draw_rect(Rect2(rect.position.x, rect.position.y + rect.size.y - t, rect.size.x, t), Color.WHITE, true)
@@ -262,13 +262,13 @@ func _draw_stat_boxes():
 	var bx  = left_x + (left_w - bw) / 2.0
 	var by_ = hold_box_y + preview_h + CELL * 1.5
 	for _i in range(3):
-		_outlined_rect(Rect2(bx, by_, bw, bh), Color.BLACK, Color.WHITE, BORDER)
+		_outlined_rect(Rect2(bx, by_, bw, bh), Color.DARK_BLUE , Color.WHITE, BORDER)
 		by_ += bh + gap
 
 func _draw_preview_box(bx: float, by: float, piece_type: int, dimmed: bool):
 	_outlined_rect(
 		Rect2(bx - BORDER, by - BORDER, preview_w + BORDER*2, preview_h + BORDER*2),
-		Color.BLACK, Color.WHITE, BORDER)
+		Color.DARK_BLUE , Color.WHITE, BORDER)
 
 	if piece_type < 0:
 		return   # empty hold slot
@@ -294,7 +294,7 @@ func _draw_preview_box(bx: float, by: float, piece_type: int, dimmed: bool):
 		if dimmed:
 			# Draw dimmed outline only
 			var t = max(2.0, pc * 0.07)
-			draw_rect(rect, Color.BLACK, true)
+			draw_rect(rect, Color.DARK_BLUE , true)
 			draw_rect(Rect2(rect.position.x, rect.position.y, rect.size.x, t), Color(1,1,1,alpha), true)
 			draw_rect(Rect2(rect.position.x, rect.position.y + rect.size.y - t, rect.size.x, t), Color(1,1,1,alpha), true)
 			draw_rect(Rect2(rect.position.x, rect.position.y, t, rect.size.y), Color(1,1,1,alpha), true)
@@ -308,7 +308,7 @@ func _draw_overlay(title: String, subtitle: String):
 	var bh = CELL * 6.0
 	var bx = BX + (BW - bw) / 2.0
 	var by = BY + (BH - bh) / 2.0
-	_outlined_rect(Rect2(bx, by, bw, bh), Color.BLACK, Color.WHITE, 3)
+	_outlined_rect(Rect2(bx, by, bw, bh), Color.DARK_BLUE , Color.WHITE, 3)
 	if overlay_lbl:
 		overlay_lbl.text     = title + "\n\n" + subtitle
 		overlay_lbl.position = Vector2(bx, by)
