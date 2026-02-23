@@ -1,0 +1,82 @@
+[33mcommit 4ff8d624562a94f1076f20fa46a6f7f483a84127[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Flowver <twicebrick@gmail.com>
+Date:   Mon Feb 23 04:43:27 2026 -0500
+
+    tetris
+
+[33mcommit 6841649cc7f2570ed13bd909eed1ec1313af1559[m
+Author: Flowver <twicebrick@gmail.com>
+Date:   Mon Feb 23 03:04:37 2026 -0500
+
+    pls fix pls fix pls fix pls fix pls fix pls fix
+
+[33mcommit a9ce9ce75862906511685cbff94f533debd99d97[m
+Author: Flowver <twicebrick@gmail.com>
+Date:   Mon Feb 23 03:01:10 2026 -0500
+
+    praying this dosent kill everything-Architect menu
+
+[33mcommit 30da58bb4c344940ac508b48b51defcc75d34c82[m
+Merge: 4855856 f7cc530
+Author: Flowver <twicebrick@gmail.com>
+Date:   Mon Feb 23 00:52:41 2026 -0500
+
+    Merge branch 'main' of https://github.com/Audreywang27/career-quest
+
+[33mcommit f7cc530de39e0db8eae7830cc51d8e73eb8a193c[m
+Author: Audreywang27 <114363498+Audreywang27@users.noreply.github.com>
+Date:   Sun Feb 22 23:38:21 2026 -0500
+
+    uupdated
+    
+    just need to draw sprites now hten yeyyayayyay
+
+[33mcommit 96262cf25f267dadab0943b101be700034315dca[m
+Author: Audreywang27 <114363498+Audreywang27@users.noreply.github.com>
+Date:   Fri Feb 20 23:30:11 2026 -0500
+
+    added stuff
+    
+    need to finish by tmrw
+
+[33mcommit 0c0aabd05aa367891a2de95070c99fb97c3d77c6[m
+Author: Audreywang27 <114363498+Audreywang27@users.noreply.github.com>
+Date:   Thu Feb 19 21:12:59 2026 -0500
+
+    added some more stuff
+    
+    need to work on the ending of the doctor one tho and draw the sprites for this one
+
+[33mcommit edf9566009e67440dcc0a729e94311a9f7668e41[m
+Author: Audreywang27 <114363498+Audreywang27@users.noreply.github.com>
+Date:   Wed Feb 18 19:07:36 2026 -0500
+
+    Update
+    
+    need to update the result screen and stuff bc it's just kinda iffy rn. also draw the ekg and stuff
+
+[33mcommit 449a3b3cc8da440639358812152cfc6847b55ada[m
+Author: Audreywang27 <114363498+Audreywang27@users.noreply.github.com>
+Date:   Sun Jan 18 16:59:15 2026 -0500
+
+    added new scenes
+    
+    Still need to work on differentiating the godot code paths (godot java) bc rn they're all going to the same one...
+
+[33mcommit 48558563046f59428882d3badb5c3dba5eb3f029[m
+Author: Flowver <twicebrick@gmail.com>
+Date:   Sun Jan 11 13:40:10 2026 -0500
+
+    test 2
+
+[33mcommit 95c2423f499b94e7b385f10f69394d1a87e8366f[m
+Author: Flowver <twicebrick@gmail.com>
+Date:   Sun Jan 11 13:39:20 2026 -0500
+
+    testing git source control
+
+[33mcommit fee208c0d228fc74de129e57eb3550ce8cbcd4fe[m
+Author: Audreywang27 <114363498+Audreywang27@users.noreply.github.com>
+Date:   Sat Jan 10 19:12:01 2026 -0500
+
+    Initial commit
