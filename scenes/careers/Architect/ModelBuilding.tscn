@@ -1,61 +1,61 @@
 [gd_scene load_steps=2 format=3 uid="uid://76dfvlquigr3"]
 
-[ext_resource type="Script" uid="uid://b50m7ljiqx0on" path="res://scenes/careers/Architect/tetris.gd" id="1_tetris"]
+[ext_resource type="Script" uid="uid://b50m7ljiqx0on" path="res://scenes/careers/Architect/ModelBuilding.gd" id="1_ModelBuilding"]
 
-[node name="Tetris" type="Node2D"]
-script = ExtResource("1_tetris")
+[node name="ModelBuilding" type="Node2D"]
+script = ExtResource("ModelBuilding")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="OverlayLabel" type="Label" parent="UI"]
 visible = false
-theme_type_variation = &"TetrisOverlay"
+theme_type_variation = &"ModelBuildingOverlay"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="HoldLabel" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatLabel"
+theme_type_variation = &"ModelBuildingStatLabel"
 text = "HOLD"
 horizontal_alignment = 1
 
 [node name="NextLabel" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatLabel"
+theme_type_variation = &"ModelBuildingStatLabel"
 text = "NEXT"
 horizontal_alignment = 1
 
 [node name="ScoreLabel" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatLabel"
+theme_type_variation = &"ModelBuildingStatLabel"
 text = "SCORE"
 horizontal_alignment = 1
 
 [node name="ScoreValue" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatValue"
+theme_type_variation = &"ModelBuildingStatValue"
 text = "0"
 horizontal_alignment = 1
 
 [node name="LevelLabel" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatLabel"
+theme_type_variation = &"ModelBuildingStatLabel"
 text = "LEVEL"
 horizontal_alignment = 1
 
 [node name="LevelValue" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatValue"
+theme_type_variation = &"ModelBuildingStatValue"
 text = "1"
 horizontal_alignment = 1
 
 [node name="LinesLabel" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatLabel"
+theme_type_variation = &"ModelBuildingStatLabel"
 text = "LINES"
 horizontal_alignment = 1
 
 [node name="LinesValue" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatValue"
+theme_type_variation = &"ModelBuildingStatValue"
 text = "0"
 horizontal_alignment = 1
 
 [node name="InfoLabel" type="Label" parent="UI"]
-theme_type_variation = &"TetrisInfoLabel"
+theme_type_variation = &"ModelBuildingInfoLabel"
 text = "CONTROLS
 ←  /  →     Move
 ↑             Rotate

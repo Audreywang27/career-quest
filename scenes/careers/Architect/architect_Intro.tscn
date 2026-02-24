@@ -74,7 +74,7 @@ grow_vertical = 2
 theme = ExtResource("3_i73al")
 theme_override_constants/separation = 300
 
-[node name="Tetris" type="Button" parent="ColorRect/Buttons"]
+[node name="ModelBuilding" type="Button" parent="ColorRect/Buttons"]
 layout_mode = 2
 text = "Blueprint Stack"
 
@@ -90,4 +90,4 @@ expand_icon = true
 layout_mode = 2
 text = "Precision Cut"
 
-[connection signal="pressed" from="ColorRect/Buttons/Tetris" to="." method="_on_tetris_pressed"]
+[connection signal="pressed" from="ColorRect/Buttons/ModelBuilding" to="." method="_on_ModelBuilding_pressed"]

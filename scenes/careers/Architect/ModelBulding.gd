@@ -1,12 +1,5 @@
 extends Node2D
 
-# ─────────────────────────────────────────────────────────────────────────────
-#  TETRIS – Tetris.gd
-#
-#  THEME INTEGRATION
-#  Variation names: TetrisStatLabel | TetrisStatValue | TetrisInfoLabel | TetrisOverlay
-# ─────────────────────────────────────────────────────────────────────────────
-
 const COLS   = 10
 const ROWS   = 20
 const BORDER = 2

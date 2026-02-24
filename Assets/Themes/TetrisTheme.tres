@@ -1,24 +1,5 @@
 [gd_resource type="Theme" format=3 uid="uid://bp_theme"]
 
-; =============================================================================
-;  TetrisTheme.tres  –  Career Quest: Blueprint Stacker
-;
-;  Apply project-wide:
-;    Project → Project Settings → GUI → Theme → Custom → TetrisTheme.tres
-;
-;  Variation names used by Blueprint Stacker:
-;    BPStatLabel    – small headings (SCORE, LEVEL, PROGRESS, HOLD, NEXT)
-;    BPStatValue    – large numeric / progress values
-;    BPInfoLabel    – controls panel + piece name
-;    BPOverlay      – intro / pause / complete / game-over text
-;    BPCareerLabel  – top banner "ARCHITECT // Blueprint Stacker"
-;
-;  All colours follow the blueprint palette:
-;    Background  #0F1A33  (dark navy)
-;    Lines       #BFEBFF  (blueprint cyan-white)
-;    Accent      #3389FF  (bright blueprint blue)
-; =============================================================================
-
 [resource]
 
 ; ── BPStatLabel  (small category headings) ────────────────────────────────────

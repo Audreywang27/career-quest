@@ -18,5 +18,5 @@ func _input(event) -> void:
 		else:
 			Input.set_custom_mouse_cursor(cursors["pencil"])
 
-func _on_tetris_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/careers/architect/tetris.tscn")
+func _on_ModelBuilding_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/careers/architect/ModelBuilding.tscn")
