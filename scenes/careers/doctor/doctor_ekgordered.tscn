@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci7tq83xggu06"]
+[gd_scene load_steps=3 format=3 uid="uid://ci7tq83xggu06"]
 
 [ext_resource type="Script" uid="uid://c1y0tv7ruq4hr" path="res://scenes/careers/doctor/doctor_ekgordered.gd" id="1_73lk4"]
+[ext_resource type="Texture2D" uid="uid://brgcmuxfavgmb" path="res://scenes/careers/doctor/Untitled50.png" id="2_qtwwq"]
 
 [node name="DoctorIntro" type="Control"]
 layout_mode = 3
@@ -11,19 +12,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_73lk4")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -112.0
-offset_top = -82.0
-offset_right = 1062.0
-offset_bottom = 616.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(686, 364)
-color = Color(0.605157, 0.876616, 0.958852, 1)
+texture = ExtResource("2_qtwwq")
 
 [node name="SceneImage" type="TextureRect" parent="."]
 layout_mode = 1

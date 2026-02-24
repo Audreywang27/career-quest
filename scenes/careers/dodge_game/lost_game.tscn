@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4d5yrvk7sho0"]
+[gd_scene load_steps=3 format=3 uid="uid://d4d5yrvk7sho0"]
 
 [ext_resource type="Script" uid="uid://dxsoje42s2pc8" path="res://scenes/careers/dodge_game/lost_game.gd" id="1_7hj88"]
+[ext_resource type="Texture2D" uid="uid://utwfqls2jar0" path="res://scenes/careers/doctor/ending_scene/Untitled23 (4).png" id="2_b808s"]
 
 [node name="LostGame" type="Node2D"]
 script = ExtResource("1_7hj88")
@@ -8,6 +9,7 @@ script = ExtResource("1_7hj88")
 [node name="background" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("2_b808s")
 
 [node name="DialogueBox" type="Panel" parent="."]
 offset_left = 151.0
@@ -18,20 +20,20 @@ offset_bottom = 625.0
 [node name="DialogueText" type="RichTextLabel" parent="DialogueBox"]
 layout_mode = 0
 offset_left = 127.0
-offset_top = 26.0
+offset_top = 33.0
 offset_right = 727.0
-offset_bottom = 166.0
+offset_bottom = 173.0
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "[center]We had to call security to come and escort the patient through the hallway..."
 
-[node name="HBoxContainer" type="HBoxContainer" parent="DialogueBox"]
+[node name="Button" type="Button" parent="DialogueBox"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Button" type="Button" parent="DialogueBox/HBoxContainer"]
-layout_mode = 2
+offset_left = 393.0
+offset_top = 129.0
+offset_right = 462.0
+offset_bottom = 171.0
+theme_override_font_sizes/font_size = 24
 text = "Done"
 
-[connection signal="pressed" from="DialogueBox/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="DialogueBox/Button" to="." method="_on_button_pressed"]

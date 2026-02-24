@@ -5,7 +5,7 @@ extends Control
 func _ready() -> void:
 	$DialogueBox/HBoxContainer.visible = false
 	await get_tree().create_timer(2.5).timeout
-	$background.texture = load("res://scenes/careers/doctor/docpics/Untitled23 (3) (1).png")
+	$background.texture = load("res://scenes/careers/doctor/ending_scene/Untitled23 (6).png")
 	$DialogueBox/DialogueText.text = "This has been such a successful day! Good job, Doc!"
 	$DialogueBox/HBoxContainer.visible = true 
 

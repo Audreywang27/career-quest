@@ -65,7 +65,15 @@ func disable_food_button(food):
 func show_correct_expression(animal):
 	var button = $HBoxContainer.get_node(animal)
 	var original_texture = button.texture_normal
-	button.texture_normal = load("res://scenes/careers/zookeeper/button_pics/Untitled34.png")
+	print("animal is: ", animal)
+	if animal == "Monkey":
+		$HBoxContainer/Monkey.texture_normal = load("res://scenes/careers/zookeeper/animal_feeding_reactions/Untitled43 (1).png")
+	elif animal == "Penguin":
+		$HBoxContainer/Penguin.texture_normal = load("res://scenes/careers/zookeeper/animal_feeding_reactions/Untitled42 (1).png")
+	elif animal == "Lion":
+		$HBoxContainer/Lion.texture_normal = load("res://scenes/careers/zookeeper/animal_feeding_reactions/Untitled40 (2).png")
+	
+	#button.texture_normal = load("res://scenes/careers/zookeeper/button_pics/Untitled34.png")
 	await get_tree().create_timer(2.0).timeout
 	button.texture_normal = original_texture
 		
@@ -73,7 +81,12 @@ func show_correct_expression(animal):
 func show_incorrect_expression(animal):
 	var button = $HBoxContainer.get_node(animal)
 	var original_texture = button.texture_normal
-	button.texture_normal = load("res://scenes/careers/zookeeper/button_pics/Untitled33.png")
+	if animal == "Monkey":
+		$HBoxContainer/Monkey.texture_normal = load("res://scenes/careers/zookeeper/animal_feeding_reactions/Untitled43.png")
+	elif animal == "Penguin":
+		$HBoxContainer/Penguin.texture_normal = load("res://scenes/careers/zookeeper/animal_feeding_reactions/Untitled42.png")
+	elif animal == "Lion":
+		$HBoxContainer/Lion.texture_normal = load("res://scenes/careers/zookeeper/animal_feeding_reactions/Untitled40 (1).png")	
 	await get_tree().create_timer(2.0).timeout
 	button.texture_normal = original_texture
 		

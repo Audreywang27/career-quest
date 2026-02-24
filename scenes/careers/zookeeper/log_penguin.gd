@@ -1,7 +1,7 @@
 extends Node2D
 
 var questions = [
-	{"question" : "How was the lion's appetite?", "options": ["Good", "Poor", "Refused food"]},
+	{"question" : "How was the penguin's appetite?", "options": ["Good", "Poor", "Refused food"]},
 	{"question": "Did you notice anything unusual?", "options": ["No issues", "Minor concern", "Needs vet"]},
 	{"question": "How was the animal's energy level?", "options": ["Normal", "Lethargic", "Hyperactive"]},
 ]
