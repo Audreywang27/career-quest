@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.5", "Mobile")
 
 [autoload]
 
-ZookeeperData="res://scenes/careers/zookeeper/zookeeper_data.gd"
+zookeeper_data="*res://scenes/careers/zookeeper/zookeeper_data.gd"
 
 [file_customization]
 

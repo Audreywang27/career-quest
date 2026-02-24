@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://do8m8lumomhck"]
+[gd_scene load_steps=3 format=3 uid="uid://do8m8lumomhck"]
 
 [ext_resource type="Script" uid="uid://b7p4auhhxkhi" path="res://scenes/careers/doctor/doctor_results.gd" id="1_hgdcc"]
+[ext_resource type="Texture2D" uid="uid://bugg5rjtx6xoq" path="res://scenes/careers/doctor/ending_scene/Untitled23 (5).png" id="2_scurv"]
 
 [node name="DoctorIntro" type="Control"]
 layout_mode = 3
@@ -18,10 +19,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -10.0
 offset_top = -14.0
-offset_right = 1164.0
-offset_bottom = 684.0
+offset_right = -10.0
+offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_scurv")
 
 [node name="DialogueBox" type="Panel" parent="."]
 layout_mode = 1

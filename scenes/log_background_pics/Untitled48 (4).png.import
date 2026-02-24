@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4402euapugcl"
-path="res://.godot/imported/Untitled48 (3).png-cc24bb723c3c7c236369c9d7bb295d78.ctex"
+uid="uid://dt4dvl7m8wo5w"
+path="res://.godot/imported/Untitled48 (4).png-bfd36945b5eb7ec17f86491b190aee78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/careers/zookeeper/log_background_pics/Untitled48 (3).png"
-dest_files=["res://.godot/imported/Untitled48 (3).png-cc24bb723c3c7c236369c9d7bb295d78.ctex"]
+source_file="res://scenes/log_background_pics/Untitled48 (4).png"
+dest_files=["res://.godot/imported/Untitled48 (4).png-bfd36945b5eb7ec17f86491b190aee78.ctex"]
 
 [params]
 
