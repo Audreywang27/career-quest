@@ -1,26 +1,10 @@
-[gd_resource type="Theme" format=3 uid="uid://bp_theme"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cry6gavfwy5vv"]
+
 [ext_resource type="FontFile" uid="uid://c7w0rb0fhw5j0" path="res://Assets/Fonts/ShareTechMono-Regular.ttf" id="1_44la8"]
 
 [resource]
 default_base_scale = 1.0
 default_font = ExtResource("1_44la8")
-
-; ── BPStatLabel  (small category headings) ────────────────────────────────────
-Label/colors/font_color/BPStatLabel       = Color(0.75, 0.92, 1.00, 1.0)
-Label/font_sizes/font_size/BPStatLabel    = 18
-
-; ── BPStatValue  (large numbers) ──────────────────────────────────────────────
-Label/colors/font_color/BPStatValue       = Color(1.00, 1.00, 1.00, 1.0)
-Label/font_sizes/font_size/BPStatValue    = 38
-
-; ── BPInfoLabel  (controls panel, piece name) ─────────────────────────────────
-Label/colors/font_color/BPInfoLabel       = Color(0.75, 0.92, 1.00, 0.80)
-Label/font_sizes/font_size/BPInfoLabel    = 17
-
-; ── BPOverlay  (intro / pause / game-over text) ───────────────────────────────
-Label/colors/font_color/BPOverlay         = Color(0.90, 0.97, 1.00, 1.0)
-Label/font_sizes/font_size/BPOverlay      = 22
-
-; ── BPCareerLabel  (top banner) ───────────────────────────────────────────────
-Label/colors/font_color/BPCareerLabel     = Color(0.20, 0.55, 1.00, 1.0)
-Label/font_sizes/font_size/BPCareerLabel  = 20
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 35

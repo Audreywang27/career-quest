@@ -1,67 +1,79 @@
-[gd_scene load_steps=2 format=3 uid="uid://bul2nvf2uakrq"]
+[gd_scene load_steps=3 format=3 uid="uid://bul2nvf2uakrq"]
 
-[ext_resource type="Script" uid="uid://b50m7ljiqx0on" path="res://scenes/careers/Architect/ModelBulding.gd" id="1_tetris"]
+[ext_resource type="Script" uid="uid://6e62h32r6lnx" path="res://scenes/careers/Architect/ModelBulding.gd" id="1_ModelBuilding"]
+[ext_resource type="Theme" uid="uid://cry6gavfwy5vv" path="res://Assets/Themes/ModelBuildingTheme.tres" id="2_dy85v"]
 
 [node name="ModelBuilding" type="Node2D"]
-script = ExtResource("1_tetris")
+script = ExtResource("1_ModelBuilding")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="OverlayLabel" type="Label" parent="UI"]
 visible = false
-theme_type_variation = &"TetrisOverlay"
+theme = ExtResource("2_dy85v")
+theme_type_variation = &"ModelBuildingOverlay"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="HoldLabel" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatLabel"
+theme = ExtResource("2_dy85v")
+theme_type_variation = &"ModelBuildingStatLabel"
 text = "HOLD"
 horizontal_alignment = 1
 
 [node name="NextLabel" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatLabel"
+theme = ExtResource("2_dy85v")
+theme_type_variation = &"ModelBuildingStatLabel"
 text = "NEXT"
 horizontal_alignment = 1
 
 [node name="ScoreLabel" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatLabel"
+theme = ExtResource("2_dy85v")
+theme_type_variation = &"ModelBuildingStatLabel"
 text = "SCORE"
 horizontal_alignment = 1
 
 [node name="ScoreValue" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatValue"
+theme = ExtResource("2_dy85v")
+theme_type_variation = &"ModelBuildingStatValue"
 text = "0"
 horizontal_alignment = 1
 
 [node name="LevelLabel" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatLabel"
+theme = ExtResource("2_dy85v")
+theme_type_variation = &"ModelBuildingStatLabel"
 text = "LEVEL"
 horizontal_alignment = 1
 
 [node name="LevelValue" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatValue"
+theme = ExtResource("2_dy85v")
+theme_type_variation = &"ModelBuildingStatValue"
 text = "1"
 horizontal_alignment = 1
 
 [node name="LinesLabel" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatLabel"
+theme = ExtResource("2_dy85v")
+theme_type_variation = &"ModelBuildingStatLabel"
 text = "LINES"
 horizontal_alignment = 1
 
 [node name="LinesValue" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatValue"
+theme = ExtResource("2_dy85v")
+theme_type_variation = &"ModelBuildingStatValue"
 text = "0"
 horizontal_alignment = 1
 
 [node name="InfoLabel" type="Label" parent="UI"]
-theme_type_variation = &"TetrisStatLabel"
+theme = ExtResource("2_dy85v")
+theme_type_variation = &"ModelBuildingStatLabel"
 text = "CONTROLS
 ←  /  →     Move
-↑             Rotate
+↑             Rotate CW
+C             Rotate CCW
 ↓             Soft drop (hold)
 Space       Hard drop
-C / Shift   Hold piece
+Shift         Hold piece
 Enter         Pause / Restart
 
 SCORING
