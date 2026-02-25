@@ -6,7 +6,14 @@ var cursors = {
 }
 
 func _ready() -> void:
+	var screen_size = get_viewport_rect().size
+	$ColorRect.size = screen_size
+	$ColorRect.position = Vector2.ZERO
+	
+	$ColorRect/Header/Title.size = screen_size
+	$ColorRect/TextureRect.position = Vector2.ZERO
 	call_deferred("_set_cursor")
+	
 
 func _set_cursor() -> void:
 	Input.set_custom_mouse_cursor(cursors["pencil"])
