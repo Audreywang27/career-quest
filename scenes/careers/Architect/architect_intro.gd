@@ -20,3 +20,6 @@ func _input(event) -> void:
 
 func _on_ModelBuilding_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/careers/architect/ModelBuilding.tscn")
+
+func _on_puzzle_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/careers/architect/RoomByRoom.tscn")

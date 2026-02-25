@@ -68,16 +68,16 @@ horizontal_alignment = 1
 theme = ExtResource("2_dy85v")
 theme_type_variation = &"ModelBuildingStatLabel"
 text = "CONTROLS
-←  /  →     Move
+←  &  →            Move
 ↑             Rotate CW
-C             Rotate CCW
-↓             Soft drop (hold)
-Space       Hard drop
-Shift         Hold piece
-Enter         Pause / Restart
+C            Rotate CCW
+↓       Soft drop (hold)
+Space         Hard drop
+Shift        Hold piece
+Enter   Pause / Restart
 
 SCORING
-1 line    ×  100  × level
+1 line   ×  100  × level
 2 lines  ×  300  × level
 3 lines  ×  500  × level
 4 lines  ×  800  × level

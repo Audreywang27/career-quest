@@ -189,10 +189,16 @@ func _input(event):
 			queue_redraw()
 		return
 
+	# ── Escape = quit ──
+	if key.keycode == KEY_ESCAPE and key.pressed and not key.echo:
+		if game_over or paused:
+			get_tree().change_scene_to_file("res://scenes/careers/Architect/architect_intro.tscn")
+		return
+
 	if game_over or paused:
 		return
 
-	# ── Hold = C  ──
+	# ── Hold = C ──
 	if key.pressed and not key.echo:
 		if key.keycode == KEY_C:
 			_do_hold()
@@ -294,9 +300,9 @@ func _draw():
 
 	# Overlay
 	if paused:
-		_draw_overlay("PAUSED", "Enter to Resume")
+		_draw_overlay("PAUSED", "Enter to Resume\nEscape to Quit" % score)
 	elif game_over:
-		_draw_overlay("GAME OVER", "Score: %d\n\nEnter to Restart" % score)
+		_draw_overlay("GAME OVER", "Score: %d\n\nEnter to Restart\nEscape to Quit" % score)
 	else:
 		if overlay_lbl:
 			overlay_lbl.visible = false
@@ -386,12 +392,10 @@ func _draw_overlay(title: String, subtitle: String):
 	var bh = CELL * 6.0
 	var bx = BX + (BW - bw) / 2.0
 	var by = BY + (BH - bh) / 2.0
-	_outlined_rect(Rect2(bx, by, bw, bh), translucent , Color.WHITE, 3)
+	_outlined_rect(Rect2(bx, by, bw, bh), translucent, Color.WHITE, 3)
 	if overlay_lbl:
-		overlay_lbl.text     = title + "\n\n" + subtitle
-		overlay_lbl.position = Vector2(bx, by)
-		overlay_lbl.size     = Vector2(bw, bh)
-		overlay_lbl.visible  = true
+		overlay_lbl.text    = title + "\n\n" + subtitle
+		overlay_lbl.visible = true
 
 # ── Label positioning ─────────────────────────────────────────────────────────
 func _position_labels():

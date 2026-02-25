@@ -76,18 +76,15 @@ theme_override_constants/separation = 300
 
 [node name="ModelBuilding" type="Button" parent="ColorRect/Buttons"]
 layout_mode = 2
-text = "Blueprint Stack"
+text = "Model Building (Block dropper)"
 
 [node name="Puzzle" type="Button" parent="ColorRect/Buttons"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.05
-text = "Room by Room"
+text = "Room by Room (Sudoku)"
 icon_alignment = 1
 expand_icon = true
 
-[node name="Timing" type="Button" parent="ColorRect/Buttons"]
-layout_mode = 2
-text = "Precision Cut"
-
 [connection signal="pressed" from="ColorRect/Buttons/ModelBuilding" to="." method="_on_ModelBuilding_pressed"]
+[connection signal="pressed" from="ColorRect/Buttons/Puzzle" to="." method="_on_puzzle_pressed"]
