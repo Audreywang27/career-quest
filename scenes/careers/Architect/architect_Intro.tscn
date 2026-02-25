@@ -86,5 +86,13 @@ text = "Room by Room (Sudoku)"
 icon_alignment = 1
 expand_icon = true
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 1172.0
+offset_top = 179.0
+offset_right = 1448.0
+offset_bottom = 250.0
+text = "You are an architect at The Firm! Complete your daily tasks below. "
+
 [connection signal="pressed" from="ColorRect/Buttons/ModelBuilding" to="." method="_on_ModelBuilding_pressed"]
 [connection signal="pressed" from="ColorRect/Buttons/Puzzle" to="." method="_on_puzzle_pressed"]

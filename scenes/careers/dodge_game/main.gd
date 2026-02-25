@@ -17,24 +17,53 @@ var obstacle_scenes = [
 	preload("res://scenes/careers/dodge_game/obstacles/obstacle14.tscn"),
 ]
 var score = 0
-var play_area_width = 450  # Match your ColorRect width
-var play_area_center_x = 1150 / 2  # Half of screen width (adjust if needed)
-var play_area_left = play_area_center_x - (play_area_width / 2)
-var play_area_right = play_area_center_x + (play_area_width / 2)
+var play_area_width : float  # Match your ColorRect width
+var play_area_center_x : float # Half of screen width (adjust if needed)
+var play_area_left :float
+var play_area_right :float
+var scale_factor:float
 
 var lives = 3
 var game_won = false
 var invincible = false
 
 func _ready():
-	$LivesLabel.text = "❤️❤️❤️"
-	$Player.position = Vector2(play_area_center_x,get_viewport_rect().size.y - 100)
+	var screen_width = get_viewport_rect().size.x
+	var screen_height = get_viewport_rect().size.y
+	scale_factor = screen_width / 1150.0
 	
+	play_area_width = screen_width * 0.45
+	play_area_center_x = screen_width / 2
+	play_area_left = play_area_center_x - (play_area_width / 2)
+	play_area_right = play_area_center_x + (play_area_width / 2)
+	$ColorRect.size.x = play_area_width
+	$ColorRect.size.y = screen_height
+	$ColorRect.position.x = play_area_left
+	$ColorRect2.position.x = play_area_center_x - ($ColorRect2.size.x / 2)
+	#$ColorRect3.position.x = 0
+	#$ColorRect3.size.x = play_area_left
+	#$ColorRect3.size.y = screen_height
+	$ColorRect3.position = Vector2.ZERO
+	$ColorRect3.size = Vector2(screen_width, screen_height)
+
+	# Right border  
+	#$ColorRect4.position.x = play_area_right
+	#$ColorRect4.size.x = play_area_left  # same width as left border
+	#$ColorRect4.size.y = screen_height
+	
+	$LivesLabel.text = "❤️❤️❤️"
+	$LivesLabel.scale = Vector2(scale_factor, scale_factor)
+	
+	$Player.position = Vector2(play_area_center_x,get_viewport_rect().size.y - 100)
+	$Player.scale = Vector2(scale_factor, scale_factor) 
 	$Player.area_entered.connect(_on_player_hit)
+	$Player.scale_factor = scale_factor
+	
 	$Timer.timeout.connect(_spawn_obstacle)
 	$GameTimer.timeout.connect(_on_game_won)
 	
 	$ColorRect2.z_index = 99
+	#$Label.scale = Vector2(scale_factor, scale_factor)
 	$ColorRect2.z_as_relative = false
 	$Label.z_index = 100
 	$Label.z_as_relative = false
@@ -46,6 +75,7 @@ func _spawn_obstacle():
 	if time_elapsed > 20.0:  # after 20 seconds spawn 2 at once
 		await get_tree().create_timer(0.3).timeout
 		_spawn_single_obstacle()
+		
 func _spawn_single_obstacle():
 	
 	var random_scene = obstacle_scenes[randi() % obstacle_scenes.size()]	
@@ -53,6 +83,9 @@ func _spawn_single_obstacle():
 	obstacle.visible = false
 	add_child(obstacle)
 	# Random X position within play area
+	obstacle.scale = Vector2(scale_factor, scale_factor)
+	obstacle.speed = 100 * scale_factor
+# Random X position within play area
 	await get_tree().process_frame
 	
 	var poly = obstacle.get_node("CollisionPolygon2D")
@@ -62,7 +95,7 @@ func _spawn_single_obstacle():
 	for point in points:
 		min_x = min(min_x, point.x)
 		max_x = max(max_x, point.x)
-	var obstacle_width = (max_x - min_x) / 2
+	var obstacle_width = (max_x - min_x) / 2 * scale_factor
 	
 	var spawn_x = randf_range(play_area_left + obstacle_width, play_area_right - obstacle_width)
 	obstacle.position = Vector2(spawn_x, -50)

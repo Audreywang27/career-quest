@@ -16,21 +16,6 @@ wait_time = 30.0
 one_shot = true
 autostart = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(500, 900)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 326.0
-offset_top = -23.0
-offset_right = 826.0
-offset_bottom = 877.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-color = Color(1, 0.99916667, 0.99, 1)
-
 [node name="ColorRect2" type="ColorRect" parent="."]
 z_index = 99
 offset_left = 447.0
@@ -69,11 +54,27 @@ offset_bottom = 763.0
 color = Color(0.35686275, 0.63529414, 0.8509804, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="."]
+visible = false
 offset_left = 822.0
 offset_top = -31.0
 offset_right = 854.0
 offset_bottom = 767.0
 color = Color(0.35700002, 0.63636667, 0.85, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(500, 900)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 326.0
+offset_top = -23.0
+offset_right = 826.0
+offset_bottom = 877.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(1, 0.99916667, 0.99, 1)
 
 [node name="LivesLabel" type="Label" parent="."]
 offset_left = 96.0
