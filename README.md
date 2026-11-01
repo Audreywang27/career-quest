@@ -1,10 +1,15 @@
-**This is an FBLA project for the Website Design category.**\
+**This is an FBLA project for the Computer Game and Simulation Programming category.**\
 Created by Audrey Wang and Max Luo
 
-Prompt:
-Your school has opened a large gymnasium that can also be used as a 3,500-seat arena for events in the community.
-The community could rent the gymnasium for local sporting events, live concerts, trade shows, and other community events. You must create a website to promote this arena. The website should include the following elements:
-• A calendar of events
-• A box office area to purchase tickets
-• An information area that includes directions, seating charts, policies, and amenities
-• A planner page that includes information on arena rental, contacts, etc.
+**Prompt:**\
+Create an engaging game where players jump into mini-worlds that showcase different
+careers. In each career world, players must:\
+   • Experience a short scenario that captures what the job is like\
+   • Complete skill-based challenges and tasks unique to that profession\
+The game must:\
+   • Be playable on a device using Windows 10, Mac OS, a modern web browser, or a mobile
+platform\
+   • Be secure\
+   • Have no game-breaking bugs\
+By the end, players will discover what each career involves and the skills they’ll need to
+succeed. Ready to code the ultimate job tour?
