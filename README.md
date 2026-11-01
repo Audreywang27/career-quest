@@ -1,4 +1,4 @@
-##This is an FBLA project for the Website Design category.##\
+**This is an FBLA project for the Website Design category.**\
 Created by Audrey Wang and Max Luo
 
 Prompt:
